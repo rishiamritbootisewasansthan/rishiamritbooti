@@ -1,0 +1,926 @@
+
+/*home page slider*/
+
+
+
+.title {
+	background: rgba(255, 255, 255, 0.7);
+	color: #333;
+	position: fixed;
+	text-align: right;
+	top: 0;
+	right: 0;
+	padding: 10px 15px;
+	margin: 0;
+	z-index: 100;
+}
+
+.slider {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	width: 100%;
+}
+
+.slide {
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+.slide.active {
+	transform: translateX(-100%);
+}
+
+.slide .info {
+	background-color: rgba(255, 255, 255, 0.7);
+	color: #333;
+	padding: 20px 15px;
+	position: absolute;
+	opacity: 0.1;
+	top: 80px;
+	left: 40px;
+	text-align: center;
+	width: 300px;
+	max-width: 100%;
+}
+
+.slide.active .info{
+	opacity: 1;
+	transform: translateY(-40px);
+	transition: all 0.5s ease-in-out 0.8s;
+}
+
+.slide .info h1 {
+	margin: 10px 0;
+}
+
+.slide .info p {
+	letter-spacing: 1px;
+}
+
+.eraser {
+	background: #f5f5f5;
+	position: absolute;
+	transition: transform 0.5s ease-in-out;
+  opacity: 0.95;
+	top: 0;
+	left: 100%;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+}
+
+.eraser.active {
+	transform: translateX(-100%);
+}
+
+.buttons-container {
+	position: absolute;
+	bottom: 50px;
+	right: 60px;
+/*   display: flex; */
+  
+}
+
+.buttons-container button {
+	border: 2px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	cursor: pointer;
+	padding: 8px 30px;
+  margin-right: 10px;
+}
+
+.buttons-container button:hover {
+	background-color: #fff;
+	color: #A9A9A9;
+  opacity: 0.9;
+}
+
+
+@media (max-width: 400px) {
+	.slide .info {
+		top: 100px;
+		left: 10px;
+	}
+}
+/*home page slider end*/
+
+/*owner intro section*/
+ /* Container Styles */
+ #owner-container {
+    display: flex;
+    align-items: center;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    height: 1000;
+    padding: 100px 40px 100px 65px;
+    justify-content: center;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+/* Left Side (Owner Image) */
+.owner-image {
+width: 49%;
+height: auto;
+}
+
+.owner-image img {
+width: 100%;
+height: 100%;
+border-radius: 0%;
+background-color: #3d5724;
+}
+
+.owner-social-icons{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 10px;
+}
+.owner-social-icons span{ animation: wave 5s ease-in-out infinite;}
+
+.owner-social-icons a {
+    padding: 0.4rem;
+    border: 2px solid var(--color2);
+    font-size: 20px;
+    margin: 5px;
+    color: var(--color2);
+    border-radius: 7px;
+}
+/*
+.owner-social-icons span:hover a{
+    background-color: var(--color1);
+    color:white !important;
+    border: 2px solid var(--color1);
+}*/
+
+.owner-social-icons span:hover #fcbkid{
+    background-color: rgb( 0, 123, 255);
+    border: 2px solid rgb( 0, 123, 255);
+    color:white !important;
+}
+
+.owner-social-icons span:hover #ytbid{
+    background-color: rgb( 255, 0, 0);
+    border: 2px solid rgb( 255, 0, 0);
+    color:white !important;
+}
+
+.owner-social-icons span:hover #instaid{
+    background-color: rgb(131, 58, 180);
+    border: 2px solid rgb(131, 58, 180);
+    color:white !important;
+}
+/* Right Side (Heading and Text) */
+.owner-info {
+width: 49%;
+margin: 0.5rem;
+padding: 1rem;
+}
+
+.owner-info h1 {
+    color: #3d5724;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: right;
+}
+.owner-info h4{
+    color: var(--color2);
+    text-align: right;
+}
+.owner-info h6{
+    color: var(--color1);
+    text-align: right;
+}
+.owner-info p {
+    line-height: 1.5;
+      word-spacing: 2px;
+    color: #333;
+    margin: 0;
+    text-align: justify;
+    padding-left: 50px;
+    padding-top: 5px;
+  }
+  #more{
+    display: none;
+}
+
+
+       /* Style for the button container */
+       .button-container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: 10px;
+    }
+
+    /* Style for the button */
+    .read-more-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(172, 170, 16);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /* Hover effect for the button */
+    .read-more-button:hover {
+        background-color:var(--color2); /* Change the background color on hover */
+    }
+  
+
+/* Media Query for Responsiveness */
+@media (max-width: 1374px) {
+    #owner-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0.5rem;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Left Side (Owner Image) */
+    .owner-image {
+    width: 97%;
+    height: auto;
+    margin: 0.5rem;
+    }
+    
+    .owner-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    background-color: #3d5724;
+    }
+    
+    /* Right Side (Heading and Text) */
+    .owner-info {
+    width: 100%;
+    margin: 0.5rem;
+    padding:0;
+    text-align: center;
+    }
+    .owner-info h1,h4,h6{
+        text-align: center !important;
+    }
+    .owner-info h1{font-size: 2rem;}
+    .owner-info p {
+        line-height: 1.5;
+        word-spacing: 2px;
+        font-size: 16px;
+        color: #333;
+        margin: 0;
+        padding: 15px;
+        text-align: justify;
+      }
+      .button-container{
+        justify-content: center;
+      }
+}
+/*owner intro section css end*/
+
+
+/*Photo Gallery start*/
+.photo-gallery {
+    width: 92%;
+    margin: auto;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+gap: 10px;
+}
+.photo-gallery .phto-cards{
+    border: 1px solid green;
+    height: 300px;
+    position: relative;
+    background-color: black;
+}
+.photo-gallery .phto-cards .content{
+    opacity: 0;
+    transition: 0.9s;
+    position: absolute;
+}
+.photo-gallery .phto-cards img{
+position: absolute;
+   width: 100%;
+   height: 100%;
+   filter: brightness(1);
+   overflow: auto;
+   transition: transform 0.3s ease-in-out;
+}
+.photo-gallery .phto-cards img:hover{
+    transform: scale(1.1);
+}
+.photo-gallery .phto-cards:hover .content{
+    opacity: 0.8;
+}
+/* Responsive css*/
+@media screen and (max-width:1370px) {
+
+    .photo-gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+}
+}
+
+@media screen and (max-width:962px) {
+    .photo-gallery {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+}
+}
+
+@media screen and (max-width:662px) {
+    .photo-gallery {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+gap: 10px;
+}
+}
+/*Photo Gallery end*/
+
+
+
+
+/*Reviews card*/
+.reviews-card-heading {
+    background-color: #f7f7f7;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+.reviews-card-heading h4{
+    font-size: 5rem;
+    color: var(--color2);
+    text-transform: uppercase;
+}
+#reviews-card{
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 150px;
+}
+  
+.review-card-inner{
+    flex: 1;
+    max-width: 25%;
+    max-height: auto;
+    margin: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    border-radius: 10px;
+    border: 1px solid rgba(228, 225, 225, 0.315);
+    background-color: var(--color5);
+    padding: 5px 10px;
+}
+
+#reviews-card .review-card-inner .review-img {
+    max-width: 150px;
+    max-height:150px;
+    height: auto;
+    border-radius: 50%;
+    padding: .5vw;
+}
+#reviews-card .review-card-inner .review-title{
+    font-size: 18px;
+}
+
+#reviews-card .review-card-inner .i{
+color: var(--color2);
+font-size: 12px;
+font-style: italic;
+}
+#reviews-card .review-card-inner p{
+    font-size: 16px;
+}
+
+.review-card-inner .rating img {
+    max-width: 150px;
+    height: auto;
+    max-height: 150px;
+}
+/*Reviews card end*/
+
+
+
+/*responsive css*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #reviews-card{
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+    .review-card-inner{
+        min-width: 100%;
+        max-height: auto;
+        margin: 2px;
+        font-size: 16px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    #reviews-card{
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+    .review-card-inner{
+        min-width: 100%;
+        max-height: auto;
+        margin: 2px;
+        font-size: 16px;
+    }
+}
+
+
+/*Hopless Patients Section Start*/
+ 
+ .hopless-patients-section {
+    background-color: rgb(64 64 4 / 11%);
+    width: 100%; 
+    background: var(--color5);
+    position: relative;
+    z-index: 1;
+ }
+ .hopless-patients-section .h1 {
+    text-align: center;
+    font-weight: 400;
+    color: var(--color2);
+    font-size: 4vw;
+    background-color: rgba(251, 251, 250, 0.578);
+
+}
+ 
+ .hopless-patients-section img{
+ filter: brightness(1.1);
+ opacity: 0.8;
+}
+.hopless-patients-section-content{
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 150px;
+}
+.hopless-patients-section-content .cards{
+    min-width: 400px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(251, 251, 250, 0.578);
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+ 
+} 
+.hopless-patients-section-content .cards:hover{
+    background-color: rgba(64, 64, 4, 0.475);
+    color: var(--color5);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.40);
+
+ 
+} 
+.hopless-patients-section-content .cards span{
+color: var(--color5);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 2px solid var(--color5);
+}
+.hopless-patients-section-content .cards span strong{color:var(--color3);}
+.hopless-patients-section-content .cards p{
+    font-size: 16px;
+    text-align: justify;
+}
+.hopless-patients-section-content .cards h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--color5);
+}
+
+.hopless-patients-section .know-more-button {
+    display: inline-block;
+    padding: 15px 100px;
+    background-color: #3d572480;
+    color: #f5f7fa;
+    border: 3px solid #3d5724;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Hover effect for the button */
+.hopless-patients-section .know-more-button:hover {
+    background-color:var(--color2);
+    color:var(--color5) !important;
+    /* Change the background color on hover */
+}
+.hopless-patients-section .bottom{
+    padding: 0px 50px 0px 50px;
+    text-align: center;
+    color: var(--color2);
+    background-color: rgb(251 251 250 / 92%);
+    font-size: 12px;
+
+}
+
+
+    /*Responsive css*/
+@media screen and (max-width:1370px) {
+
+    .hopless-patients-section-content{
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+.hopless-patients-section-content .cards{
+    width: 100%;
+}
+
+}
+
+
+/*Hopless Patients Section end*/
+
+
+
+
+/*why choose us */
+.why-choose-us {
+    background: #F5F5F5;
+    padding-top: 45px;
+    padding-bottom: 60px;
+}
+
+.why-choose-us .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.why-choose-us-container img{
+    width: 90px;
+    height: auto;
+    min-height: 80px;
+}
+
+.why-choose-us .why-choose-us-container {
+    width: 21.99999%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: 1px solid var(--color2);
+    border-radius: 72px;
+    padding: 15px 15px;
+}
+
+.why-choose-us-inner h2{
+    font-size:5rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom:30px ;
+    color: var(--color2);
+}
+
+
+
+/*responsive css*/
+@media screen and (max-width:1370px) {
+    .why-choose-us .container {
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .why-choose-us .why-choose-us-container {
+        width: 100%;
+        margin: 5px;
+    }
+    
+}
+
+/*Why choose us end*/
+
+
+
+
+/* Our services Section start */
+
+.our-services .content{
+    z-index: 1;   
+    text-align: center; 
+}
+.our-services #bgimg{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+}
+.our-services-headings{
+    color: var(--color2);
+}
+.our-services h3{
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 15px;
+    text-wrap: pretty;
+}
+.our-services h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+
+.our-services .content-inner{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 50px 10px 50px;
+}
+      
+.our-services-row .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .our-services-row .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .our-services-row .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .our-services-row .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .our-services-row .flip-card-front {
+    background-color: #bbb;
+    color:var(--color2);
+    border-radius: 50%;
+  }
+  
+  .our-services-row .flip-card-back {
+    background-color: rgba(64, 64, 4, 0.475);
+    color: white;
+    transform: rotateY(180deg);
+  }
+ 
+
+  
+  /* Container for flexboxes */
+  .our-services .our-services-row {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+ 
+  .our-services-row h2{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  /* Create four equal columns */
+  .our-services .our-services-column {
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    border: 1px solid #D4D4D4;
+    border-radius: 1px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+}
+  
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 992px) {
+    .our-services .our-services-column {
+      flex: 50%;
+    }
+    .our-services .content-inner{
+        padding: 0px;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .our-services .our-services-row {
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+
+
+/* Our services Section end */
+
+
+
+/*Gallery section start*/
+
+.video-gallery-section .content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 50px;
+    gap: 15px;
+    row-gap: 50px;
+}
+.video-gallery-section .cards{
+    height: 300px;
+    background-color:black;
+}
+.video-gallery-section .cards .cards-content{
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+.video-gallery-section .cards img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+    filter: brightness(1);
+    transition: 0.5s;
+}
+.video-gallery-section .cards:hover img{
+    opacity: 0.8;
+    
+}
+
+.video-gallery-section .cards .cards-content span{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    top: 37%;
+    position: relative;
+    color: var(--color5);
+    gap: 10px;
+    
+}
+.video-gallery-section .cards a{
+    margin: auto;
+    border-radius: 10px;
+    text-decoration:none;
+    color:rgb( 255, 0, 0);
+    transition: 0.5s;
+    }
+
+    .video-gallery-section .cards a:hover{
+    color: var(--color5) !important;
+    }
+/*responsive css*/
+
+@media screen and (max-width:992px) {
+    .video-gallery-section .content{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+    
+}
+
+@media screen and (max-width:720px) {
+    .video-gallery-section .content{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 15px;
+    }
+    
+}
+
+/*Gallery section end*/
+
+
+
+
+
+/* why choose Ayurveda section start*/
+.why-choose-ayurveda-section {
+    position: relative;
+    height: auto; /* Set a height for the container */
+    width: 100%;
+}
+
+.why-choose-ayurveda-section .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Move the background image behind the content */
+}
+
+.why-choose-ayurveda-section .background-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the entire area */
+    padding: 4rem;
+    opacity:0.2;
+}
+
+.why-choose-ayurveda-section .content {
+    position: relative;
+    z-index: 1; /* Bring the content to the front */
+}
+
+.why-choose-ayurveda-section .content h2 {
+    text-align: center;
+    font-weight: 500;
+    color: var(--color5);
+    font-size: 4.2vw;
+    padding:2vw 5vw 2vw 5vw;
+    background-color: var(--color2);
+    text-transform: uppercase;
+}
+.why-choose-ayurveda-inner-section-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.why-choose-ayurveda-inner-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.why-choose-ayurveda-inner-section .content{
+    display: flex;
+    width:95%;
+    margin: 10px;
+}
+
+.why-choose-ayurveda-inner-section .spanimg{
+align-items: center;
+justify-content: center;
+display: flex;
+}
+.why-choose-ayurveda-inner-section .spanimg img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+.why-choose-ayurveda-inner-section .content .right h6{
+    text-align: end;
+}
+.why-choose-ayurveda-inner-section .content h6{
+    font-size: 20px;
+    color: var(--color2);
+}
+.why-choose-ayurveda-inner-section .content p{
+    text-align: justify;
+}
+.why-choose-ayurveda-inner-section .content .right{
+    text-align: end;
+}
+
+
+
+/*responsive css*/
+
+@media screen and (max-width: 1370px) {
+    .why-choose-ayurveda-inner-section-wrapper{
+        flex-direction: column;
+    }
+    .why-choose-ayurveda-inner-section{
+        width: 100%;
+        padding: 20px;
+    }
+}
+/*Why choose ayurveda section end*/
+
+
+
+
+
+
+

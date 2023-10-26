@@ -1,0 +1,275 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --color1: rgb(172, 170, 16);
+    --color2:#3d5724;
+    --color3: #c00000;
+    --color4: #333;
+    --color5:white; /* Define a secondary color variable */
+    --backgroundcolor: rgb(64 64 4 / 2%);
+    --bgcolor:#F5F5F5;
+    --backgroundcolor1:#f7f7f7;
+  }
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background-color: white;
+    color: #333;
+}
+p{
+    line-height: 1.5;
+    word-spacing: 2px;
+    font-size: 18px;
+}
+a:hover{
+    color: rgb(172, 170, 16) !important;
+    text-decoration: none !important;
+} 
+
+
+a:before,
+a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(172, 170, 16);
+    transition: width 0.7s ease;
+}
+
+a:hover:before,
+a:hover:after {
+    width: auto;
+}
+
+.display-flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.display-flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:1370px) {
+    .display-flex-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+
+
+.text-align-center{text-align: center !important;}
+.text-align-right{text-align: right !important;}
+.text-align-left{text-align: left !important;}
+.fw-6{font-weight: 600;}
+
+.img-set-bg{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+}
+img{filter: brightness(1);}
+
+.spacer50{
+    height: 50px ;
+    display: block;
+}
+/* Define a keyframes animation for scaling down when not hovering */
+@keyframes scaleUp {
+    from {
+        transform: scaleX(1); /* Start with normal width */
+    }
+    to {
+        transform: scaleX(2); /* End with double width */
+    }
+}
+
+
+
+.typing-text1 {
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    animation: typing 4s steps(20, end) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+.typing-text {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    transition: border 0.5s ease-in-out; /* Added transition for smooth effect */
+}
+
+
+
+
+/*Appointment section start*/
+.appointment-section{
+    min-height: 500px;
+    width: 100%; 
+    background: var(--color5);
+    position: relative;
+    z-index: 1;
+    }
+    .appointment-section-inner{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        padding: 50px 100px 50px 100px;
+    }
+    .appointment-section-inner .home-office-hours{
+    background-color: rgb(143 179 43 / 69%);
+    height: 100%;
+    width: 35%;
+    color: var(--color5);
+    padding: 15px;
+    }
+    .appointment-section-inner .home-office-hours span{
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 5px solid var(--color1);
+    width: 100%;
+    display: block;
+    
+    }
+    .appointment-section-inner .home-office-hours .days{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding:10px 0 10px 0; 
+    border-bottom: 2px solid rgb(255 255 255 / 48%);
+    }
+    
+    .appointment-section-inner .home-office-hours .days p{
+        font-size: 22px;
+        }
+    
+    
+    .appointment-section .home-appointment-content {
+        width: 65%;
+    } 
+    .appointment-section .home-appointment-content h6{
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--color2);
+    text-align: right;}
+    
+    .appointment-section .home-appointment-content .appointment-button {
+        display: inline-block;
+        padding: 15px 60px;
+        background-color: #3d572480;
+        color: #f5f7fa;
+        border: 3px solid #3d5724;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    /* Hover effect for the button */
+    .appointment-section .appointment-button:hover {
+        background-color:var(--color2);
+        color:var(--color5) !important;
+        /* Change the background color on hover */
+    }
+    
+    .know-more-button {
+        display: inline-block;
+        padding: 15px 100px;
+        background-color: #3d572480;
+        color: #f5f7fa;
+        border: 3px solid #3d5724;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    /* Hover effect for the button */
+    .know-more-button:hover {
+        background-color:var(--color2);
+        color:var(--color5) !important;
+        /* Change the background color on hover */
+    }
+    
+    /*Responsive css*/
+    @media screen and (max-width:1370px) {
+    
+        .appointment-section .home-appointment-content {
+        width: 100%;
+    } 
+    .appointment-section-inner .home-office-hours{
+        width: 100%;
+    }
+    .appointment-section-inner{
+        padding:10px;
+        flex-direction: column;
+    }
+    .appointment-section .home-appointment-content .know-more-button {
+        padding: 10px;
+    }
+    .appointment-section .home-appointment-content .appointment-button{
+        padding: 10px;
+    }
+    .appointment-section .home-appointment-content h6 {
+        font-size: 30px;
+    }
+    }
+    
+    
+    /*Appointment section end*/
+    
+/*  header section for all pages start*/
+
+    #header-background{
+        z-index: 1;
+        text-align: center;
+        color: var(--color2);
+        position: relative;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        #header-background h1{
+            font-size: 3.5rem;
+            text-transform: capitalize;
+        }
+        #header-background img{
+            z-index: -1;
+            position: absolute;
+            height: 200px;
+            width: 100%;
+            }
+              
+
+  /*  header section for all pages end*/          

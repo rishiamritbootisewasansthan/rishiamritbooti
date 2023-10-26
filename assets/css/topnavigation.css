@@ -1,0 +1,316 @@
+.headercstm{
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content:space-around;
+    width: 100%;
+}
+
+#sitelogo img{
+    max-height: 10rem;
+    width: 10rem;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10rem;
+}
+
+#slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 4px 0;
+    color: #3d5724;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#sloganh4{
+    font-size: 1rem;
+    margin-top: 0px;
+}
+#sloganh5{
+    font-size: x-small;
+}
+
+#ngoname{
+    font-size: 3.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #c00000;
+    text-transform: uppercase;
+    font-weight: unset;
+}
+.ngonamehindi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+    font-size: 0.7rem;
+}
+.ngonamehindi>h3{
+    font-weight: 500;
+    word-spacing: 3px;
+    margin: -9px 13px -3px auto;
+}
+.text-outlineW {
+     /* Text color */
+    text-shadow: 
+      -2px -2px 0 #fff, /* Top-left shadow */
+      2px -2px 0 #fff,  /* Top-right shadow */
+      -2px 2px 0 #fff,  /* Bottom-left shadow */
+      2px 2px 0 #fff;   /* Bottom-right shadow */
+  }
+
+  .text-outlineG {
+    /* Text color */
+   text-shadow: 
+     -2px -2px 0 #fff, /* Top-left shadow */
+     2px -2px 0 #fff,  /* Top-right shadow */
+     -2px 2px 0 #fff,  /* Bottom-left shadow */
+     2px 2px 0 #fff;   /* Bottom-right shadow */
+ }  
+
+ .text-outlineL {
+    /* Text color */
+   text-shadow: 
+     -1px -1px 0 #fff, /* Top-left shadow */
+     1px -1px 0 #fff,  /* Top-right shadow */
+     -1px 1px 0 #fff,  /* Bottom-left shadow */
+     1px 1px 0 #fff;   /* Bottom-right shadow */
+ }  
+.text-align-center{
+    text-align: center !important;
+}
+#gurujidescription{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3d5724;
+}
+#gurujidescription  h2{
+    font-size: 3.1rem;
+}
+#gurujidescription  h3{
+    font-size: 1rem;
+    color: #c00000;
+    text-align: end;
+    margin-top: -0.4rem;
+    font-style: italic;
+}
+#gurujidescription  h4{
+    text-align: end;
+    font-size: 0.5rem;
+}
+/*  Header end  */
+
+
+
+
+
+.topnavcontact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color5);
+    padding: 3px 10px 4px 10px;
+    background-color: var(--color1);
+    font-size: 1.2rem;
+}
+.topnavcontact a{color:var(--color5);text-decoration: none;}
+.topnavcontact a:hover{color:var(--color5) !important;cursor: pointer;border-bottom: 1px solid white;}
+
+#topnav{
+    max-width: 100%;
+    min-height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: rgb(172, 170, 16);
+    height: 5rem;
+    position: sticky;
+    top: 15px;
+    padding: 0px 10px 0px 10px;
+    margin: 1rem 0 0 0;
+    box-shadow: 0px 5px 10px rgb(0 0 0 / 48%); /* Bottom shadow */
+}
+
+#topnav ul li{
+list-style: none;
+display: inline-flex;
+font-weight: 300;
+}
+
+
+.topmenu li a {
+    color: rgb(172, 170, 16);
+    text-decoration: none;
+    font-weight: normal;
+  }
+ .topmenu li a:hover{color: rgb(172, 170, 16);} 
+  
+.topmenu li a {
+    padding: 15px 10px;
+    position: relative;
+}
+
+.topmenu li a:before,
+.topmenu li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(172, 170, 16);
+    transition: width 0.7s ease;
+}
+
+.topmenu li a:before {
+    top: 0;
+    transition-delay: 0.2s; /* Delay for top border */
+}
+
+.topmenu li a:after {
+    bottom: 0;
+    transition-delay: 0s; /* No delay for bottom border */
+}
+
+.topmenu li a:hover:before,
+.topmenu li a:hover:after {
+    width: 100%;
+}
+
+
+.socialicons li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(172, 170, 16);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+    position: relative;
+    transition: background-color 0.7s ease; /* Add transition property */
+    animation: wave 5s ease-in-out infinite;
+}
+
+.socialicons li:nth-child(2) {
+    animation-delay: 1s; /* Add a delay to the second icon */
+}
+
+.socialicons li:nth-child(3) {
+    animation-delay: 2s; /* Add a delay to the third icon */
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.socialicons li:hover {
+    background-color: rgb(172, 170, 16);
+    border: 2px solid rgb(172, 170, 16);
+}
+
+.socialicons li a {
+    color: rgb(172, 170, 16);
+}
+
+.socialicons li:hover i {
+    color: white;
+}
+
+
+@media screen and (max-width: 1373px) {
+    .topnavcontact {
+        flex-direction: column;
+    }   
+ #topnav{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    top: 0px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.186);
+}
+.headercstm{
+    flex-direction: column;
+    align-items: center;
+}
+
+.ngonamehindi>h3{
+    margin:auto;
+}
+.topmenu{
+    text-align: center;
+   padding: 0px;
+}
+.topmenu li a {
+    padding: 8px 6px;
+}
+.socialicons{
+    padding: 0px;
+    height: 40;
+    width: 40;
+    border-radius: 140%;
+}
+.header2{
+    flex-direction: column;
+}
+#sitelogo {
+    margin-right: 0px; 
+    margin-left: 0px;
+}
+#sitelogo img{
+    width: 5rem;
+    height: 5rem;
+}
+.header1{
+    margin-left:0px;
+}
+#slogan {
+    padding: 10px 0 2px 0;
+    font-size: x-small;
+    color: #3d5724;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: center;
+}
+
+#slogan h4 {
+    font-size: 12px;
+}
+
+#gurujidescription{
+    text-align: center;
+}
+#gurujidescription > h2{
+    font-size: 25px;
+    border-bottom: 1px solid white;
+}
+#gurujidescription > h3{
+    font-size: 20px;
+    color: #3d5724; 
+}
+#gurujidescription > h4{
+    font-size: 13px;   
+    font-style: italic;
+}
+#gurujidescription h5{
+    font-size: 0.5rem;
+}
+
+}
