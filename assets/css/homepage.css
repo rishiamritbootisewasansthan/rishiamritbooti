@@ -549,7 +549,10 @@ color: var(--color5);
 
 @media screen and (max-width:600px){
 	.hopless-patients-section-content .cards {
-    min-width: calc(4vw + 10px);
+    min-width: auto;
+	}
+	.hopless-patients-section .h1 {
+		font-size: calc(4vw + 10px);
 	}
 }
 @media screen and (max-width:1370px) {
