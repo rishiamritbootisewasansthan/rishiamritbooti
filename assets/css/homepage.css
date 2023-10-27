@@ -616,6 +616,12 @@ color: var(--color5);
 
 
 /*responsive css*/
+@media screen and (max-width:600px) {
+.why-choose-us-inner h2{
+    font-size:3rem;
+}
+}
+
 @media screen and (max-width:1370px) {
     .why-choose-us .container {
         flex-direction: column;
@@ -750,6 +756,9 @@ color: var(--color5);
       flex-direction: column;
       padding: 10px;
     }
+	  .our-services h2 {
+    font-size: 3rem;
+	  }
   }
 
 
