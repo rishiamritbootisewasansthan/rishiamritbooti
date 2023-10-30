@@ -222,6 +222,15 @@ img{filter: brightness(1);}
     }
     
     /*Responsive css*/
+
+@media screen and (max-width:432px){
+    .appointment-section-inner .home-office-hours .days {
+        flex-direction: column !important;
+    }
+    .appointment-section-inner .home-office-hours span {
+        font-size: 25px !important;
+    }
+}
     @media screen and (max-width:1370px) {
     
         .appointment-section .home-appointment-content {
