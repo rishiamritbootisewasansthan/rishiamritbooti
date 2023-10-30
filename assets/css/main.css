@@ -223,7 +223,7 @@ img{filter: brightness(1);}
     
     /*Responsive css*/
 
-@media screen and (max-width:432px){
+@media screen and (max-width:442px){
     .appointment-section-inner .home-office-hours .days {
         flex-direction: column !important;
     }
